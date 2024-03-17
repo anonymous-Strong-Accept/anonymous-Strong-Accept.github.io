@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html>
+
+<head lang="en">
+  <!-- <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> -->
+
+  <!-- <meta http-equiv="x-ua-compatible" content="ie=edge"> -->
+
+  <title>ECOVSR</title>
+
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- mirror: F0%9F%AA%9E&lt -->
+
+  <link rel="stylesheet" type="text/css" href="./ClimateNeRF_files/slick.css">
+  <link rel="stylesheet" type="text/css" href="./ClimateNeRF_files/slick-theme.css">
+  <link rel="stylesheet" href="./ClimateNeRF_files/bulma.min.css">
+  <link rel="stylesheet" href="./ClimateNeRF_files/bulma-slider.min.css">
+  <link rel="stylesheet" href="./ClimateNeRF_files/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./ClimateNeRF_files/bootstrap.min.css">
+  <link rel="stylesheet" href="./ClimateNeRF_files/font-awesome.min.css">
+  <link rel="stylesheet" href="./ClimateNeRF_files/codemirror.min.css">
+  <link rel="stylesheet" href="./ClimateNeRF_files/app.css">
+  <link rel="stylesheet" href="./ClimateNeRF_files/index.css">
+  <link rel="stylesheet" href="./ClimateNeRF_files/select.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="resources/glide.core.min.css">
+  <link rel="stylesheet" href="resources/glide.theme.min.css">
+  <link rel="stylesheet" href="resources/glide-custom.css">
+  <script src="resources/handlers.js"></script>
+  <script src="./ClimateNeRF_files/jquery.min.js"></script>
+  <script src="./ClimateNeRF_files/bootstrap.min.js"></script>
+  <script src="./ClimateNeRF_files/codemirror.min.js"></script>
+  <script src="./ClimateNeRF_files/clipboard.min.js"></script>
+  <script src="./ClimateNeRF_files/video_comparison.js"></script>
+  <script src="./ClimateNeRF_files/select.js"></script>
+  <script src="./ClimateNeRF_files/bulma-slider.min.js"></script>
+  <script src="./ClimateNeRF_files/bulma-carousel.min.js"></script>
+  <!-- <script src="./ClimateNeRF_files/app.js"></script> -->
+  <script src="./ClimateNeRF_files/index.js"></script>
+  <!-- <script src="./ClimateNeRF_files/slick.js"></script> -->
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  
+  <script src="resources/glide.min.js"></script>
+  <script>
+    window.onload = function () {
+      new Glide("#dynamic-carousel", {
+        type: "carousel",
+        perView: 1.68,
+        focusAt: "center",
+        autoplay: 20000,
+        hoverpause: true
+      }).mount();
+      new Glide("#static-carousel", {
+        type: "carousel",
+        perView: 1.68,
+        focusAt: "center",
+        autoplay: 3000,
+        hoverpause: true
+      }).mount();
+      new Glide("#realtime-carousel", {
+        type: "carousel",
+        perView: 2.05,
+        focusAt: "center",
+        autoplay: 3000,
+        hoverpause: true
+      }).mount();
+    };
+  </script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-RZ6PES7EKD"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-RZ6PES7EKD');
+  </script>
+</head>
+
+<body>
+  <div class="container" id="header" style="text-align: center; margin: auto;">
+    <div class="row" id="title-row" style="max-width: 100%; margin: 0 auto; display: inline-block">
+      <h2 class="col-md-12 text-center" id="title">
+        <br><b>Efficient Compression-Omniscient Video Super-Resolution</b>
+      </h2>
+      <h3 class="col-md-12 text-center" id="title">
+        Anonymous ECCV 2024 Submission<br><br>
+        Paper ID #1531<br>
+      </h3>
+    </div>
+  </div>
+  <script>
+  </script>
+  <div class="container" id="main">
+
+  
+    <div class="row">
+      <div class="col-md-12 col-md-offset-0">
+          <center>
+            <div class="video-compare-container" id="ours" style="width: 100%">
+              <video class="video" id="simulation_video" loop="" playsinline="" autoplay="" muted=""
+                poster="ClimateNeRF_files/loading.gif" src="ECOVSR_files/ours/crf_15/000.mp4"
+                onplay="resizeAndPlay(this)">
+              </video>
+              <canvas class="videoMerge" id="simulation_videoMerge"></canvas>
+            </div>
+            <video class="video" id="baseline" loop="" playsinline="" autoplay="" muted=""
+              poster="ClimateNeRF_files/loading.gif" src="ECOVSR_files/ours/crf_15/000.mp4" style="width: 0%">
+            </video>
+            <p>
+              You can select different <b>constant rate factors</b> for different <b>scenes</b> within two <b>testsets</b> for comparison.<br />
+              The comparison involves our <b>Trans.-based</b> method and 4x <b>bicubic</b> interpolation.
+            </p>
+            <h4>
+              Constant Rate Factor
+            </h4>
+            <ul class="nav nav-pills nav-justified" id="sim-view-ul" style="width: 45%">
+              <li role="presentation" class="active"><a href="javascript: void(0);" onclick="ChangeSim(0);">crf_15</a>
+              </li>
+              <li role="presentation"><a href="javascript: void(0);" onclick="ChangeSim(1);">crf_25</a></li>
+              <li role="presentation"><a href="javascript: void(0);" onclick="ChangeSim(2);">crf_35</a></li>
+            </ul>
+            <h4>
+              Testset
+            </h4>
+            <ul class="nav nav-pills nav-justified" id="dataset-view-ul" style="width: 30%">
+              <li role="presentation" class="active"><a href="javascript: void(0);" onclick="ChangeDataset(0);">REDS4</a></li>
+              <li role="presentation"><a href="javascript: void(0);" onclick="ChangeDataset(1);">VID4</a></li>
+            </ul>
+            <h4>
+              Scene
+            </h4>
+            <ul class="nav nav-pills nav-justified" id="scene-view-ul" style="width: 60%">
+              <li role="presentation" class="active"><a href="javascript: void(0);"
+                  onclick="ChangeScene(0);">000</a>
+              </li>
+              <li role="presentation"><a href="javascript: void(0);" onclick="ChangeScene(1);">011</a>
+              </li>
+              <li role="presentation"><a href="javascript: void(0);" onclick="ChangeScene(2);">015</a>
+              </li>
+              <li role="presentation"><a href="javascript: void(0);" onclick="ChangeScene(3);">020</a>
+              </li>
+          </center>
+      </div>
+    </div>
+
+
+
+    <div class="row">
+      <div class="col-md-10 col-md-offset-1">
+        <h3>
+          Abstract
+        </h3>
+        <div class="text-justify">
+          Videos transmitted over the Internet or stored on client devices are typically in compressed formats under the random access mode.
+          Existing compressed video super-resolution methods utilise metadata in a sequential manner consistent with presentation timestamps. 
+          However, metadata is closely correlated with decoding timestamps, and there exists a large discrepancy between decoding and presentation timestamps. 
+          Ignoring this discrepancy will hinder the effective use of metadata and lead to undesirable results. <br> <br>
+          <center>
+            <img src="./ECOVSR_files/Picture1.svg" class="img-responsive" alt="overview" width="100%"
+              style="margin:auto;">
+          </center>
+          <font size="2" color="gray">
+          Comparison of our method and the state-of-the-art compressed Video Super-Resolution (VSR) method (CAVSR). 
+          (a) At time step i, metadata is generated by a current frame x<sub>i</sub> and a reference frame x<sub>i−α</sub>, where the value of α is decided by the codec process. 
+          (b) Since α is not always equal to 1, using mismatched metadata in CAVSR to align the previous feature h<sub>i−1</sub> will cause misalignment
+          (c) Some visualisations of misalignment in CAVSR. (d) Our alignment method accurately models the moving car and retains better contours thanks to the correct use of metadata.
+          </font>
+          <br><br>In this paper, we propose an efficient compression-omniscient video super-resolution framework that correctly and fully leverages metadata extracted from the random-access compressed video. 
+          Firstly, we introduce a compression-omniscient propagation scheme based on the decoding timestamps. 
+          It leads to three major advantages: 
+          (1) With the revisit mechanism and the design based on decoding timestamps, our propagation can refer to information from different spatiotemporal locations; 
+          (2) This propagation matches the correct metadata prior for each reference information; 
+          (3) We employ parallel computation during inference leads to more than 50% speedup.
+          Secondly, we propose a motion vector refinement module that refines motion vectors to the optical flow domain. 
+          This enables us to efficiently and accurately estimate the correspondence of information from different spatiotemporal locations. 
+          Experimental results demonstrate that our framework significantly improves efficiency while achieving state-of-the-art performance.
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-10 col-md-offset-1">
+        <h3>
+          Method
+        </h3>
+        <center>
+          <img src="./ECOVSR_files/Picture2.svg" class="img-responsive" width="80%"
+            style="max-height: 450px;margin:auto;">
+        </center>
+
+        <div class="text-justify">
+          The overall architecture of the proposed framework. Given a frame sequence, let \(x_i\) be the current frame with presentation order \(i\), \(i-{\alpha}\) and \(i+{\beta}\) are two reference time steps of frame \(x_i\), \(f_i^j\) represent the feature computed at the \(i\)-th time step in the \(j\)-th feature state (shallow, intermediate). We slice two neighbouring I- or P-frames and all of the B-frames in them as a group. The first group starts with I-frame \(x_0\) and the following group will start with the P-frame. First, we compute shallow feature \(f_i^1\) through input frame \(x_i\) into the feature extraction module. Then, to obtain the feature \(f_i^j\), we first compute optical flow from reference frame \(x_{i-{\alpha}}\) and \(x_{i+{\beta}}\) to the current frame \(x_i\) using our proposed motion vector refinement module, which will be discussed in the next section:
+          $$o_{i\rightarrow i-{\alpha}}, o_{i\rightarrow i+{\beta}} = \textit{MVRM}(x_i, x_{i-{\alpha}}, x_{i+{\beta}}, m_{i\rightarrow i-{\alpha}}, m_{i\rightarrow i+{\beta}}),$$
+          where \(o_{i\rightarrow i-{\alpha}}\), \(m_{i\rightarrow i+{\alpha}}\) denote the feature-level optical flow and the motion vector from \(x_i\) to the \(x_{i-\alpha}\). The feature-level optical flows are used to warp the corresponding features to obtain the alignment features, and then they will be concatenated and passed into the feature aggregation block within propagation:
+          $$f_i^j = \mathcal{A}\Big(\textit{c}\big(f_i^{j-1}, \mathcal{W}(f_{i-{\alpha}}^j, o_{i\rightarrow i-{\alpha}}), \mathcal{W}(f_{i+{\beta}}^j, o_{i\rightarrow i+{\beta}})\big)\Big),$$
+          where \(\mathcal{A}\) represents feature aggregation block, \(\textit{c}\) denotes concatenation along channel dimension, \(\mathcal{W}\) represents warping operation. Finally, we can compute super-resolution frames \(y_i\) after propagation by using the final feature \(f_i^3\) through an upsampling module. In the following procedure, we will only elaborate on the reference time step \(i-{\alpha}\), and the same goes for \(i+{\beta}\).
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-10 col-md-offset-1">
+        <h3>
+          Comparsion
+        </h3>
+      </div> 
+    </div>
+    <div class="glide" id="dynamic-carousel">
+      <div class="glide__track" data-glide-el="track">
+        <ul class="glide__slides">
+          <li class="glide__slide">
+            <video controls muted loop autoplay>
+              <source src="ECOVSR_files/Calendar_comparison.mp4" type="video/mp4" />
+            </video>
+          </li>
+          <li class="glide__slide">
+            <video controls muted loop autoplay>
+              <source src="ECOVSR_files/City_comparison.mp4" type="video/mp4" />
+            </video>
+          </li>
+          <li class="glide__slide">
+            <video controls muted loop autoplay>
+              <source src="ECOVSR_files/Foliage_comparison.mp4" type="video/mp4" />
+            </video>
+          </li>
+          <li class="glide__slide">
+            <video controls muted loop autoplay>
+              <source src="ECOVSR_files/Walk_comparison.mp4" type="video/mp4" />
+            </video>
+          </li>
+        </ul>
+      </div>
+      <div class="glide__arrows" data-glide-el="controls">
+        <span class="glide__arrow glide__arrow--left" data-glide-dir="<"><img
+            src="resources/arrow-left-circle-fill.svg" /></span>
+        <span class="glide__arrow glide__arrow--right" data-glide-dir=">"><img
+            src="resources/arrow-right-circle-fill.svg" /></span>
+      </div>
+      <div class="glide__bullets" data-glide-el="controls[nav]">
+        <span class="glide__bullet" data-glide-dir="=0"></span>
+        <span class="glide__bullet" data-glide-dir="=1"></span>
+        <span class="glide__bullet" data-glide-dir="=2"></span>
+        <span class="glide__bullet" data-glide-dir="=3"></span>
+      </div>
+    </div>
+
+  </div>
+</body>
+f
+
+</html>
