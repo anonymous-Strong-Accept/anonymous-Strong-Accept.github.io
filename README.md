@@ -1,2 +1,2 @@
 # Compression-Omniscient Video Super-Resolution (COVSR)
-This is the project page of COVSR
+This is the project page of COVSR\herf{covsr.github.io}.
