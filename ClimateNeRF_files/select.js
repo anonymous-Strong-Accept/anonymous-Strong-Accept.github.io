@@ -22,7 +22,7 @@ function ChangeSim(idx) {
 
     // 更新simulation_video元素的src属性以指向新的视频文件
     var video = document.getElementById("simulation_video");
-    video.src = "ECOVSR_files/ours/" + currentSim + '/' + currentScene + '.mp4';
+    video.src = "COVSR_files/ours/" + currentSim + '/' + currentScene + '.mp4';
 
     // 使用setTimeout为视频加载添加一个简单的淡入效果
     var container = video.parentNode;
@@ -45,7 +45,7 @@ function ChangeScene(idx) {
     currentScene = currentDataset === "vid4" ? ["calendar", "city", "foliage", "walk"][idx] : ["000", "011", "015", "020"][idx];
 
     let video = document.getElementById("simulation_video");
-    video.src = "ECOVSR_files/ours/" + currentSim + '/' + currentScene + '.mp4';
+    video.src = "COVSR_files/ours/" + currentSim + '/' + currentScene + '.mp4';
 
     let container = video.parentNode;
     container.style.opacity = 0;
