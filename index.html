@@ -81,23 +81,58 @@
   <div class="container" id="header" style="text-align: center; margin: auto;">
     <div class="row" id="title-row" style="max-width: 100%; margin: 0 auto; display: inline-block">
       <h2 class="col-md-12 text-center" id="title">
-        <br><b>Compression-Omniscient Video Super-Resolution</b>
+        <br><b>COVSR: Compression-Omniscient Video Super-Resolution</b>
       </h2>
     </div>
   </div>
   <script>
   </script>
   <div class="container" id="main">
+
+    <div class="row">
+      <div class="col-sm-8 col-sm-offset-2 text-center">
+        <span class="link-block">
+          <a href="" class="external-link button is-normal is-rounded is-dark">
+            <span class="icon">
+              <svg class="svg-inline--fa fa-file-pdf fa-w-12" aria-hidden="true" focusable="false" data-prefix="fas"
+                data-icon="file-pdf" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"
+                data-fa-i2svg="">
+                <path fill="currentColor"
+                  d="M181.9 256.1c-5-16-4.9-46.9-2-46.9 8.4 0 7.6 36.9 2 46.9zm-1.7 47.2c-7.7 20.2-17.3 43.3-28.4 62.7 18.3-7 39-17.2 62.9-21.9-12.7-9.6-24.9-23.4-34.5-40.8zM86.1 428.1c0 .8 13.2-5.4 34.9-40.2-6.7 6.3-29.1 24.5-34.9 40.2zM248 160h136v328c0 13.3-10.7 24-24 24H24c-13.3 0-24-10.7-24-24V24C0 10.7 10.7 0 24 0h200v136c0 13.2 10.8 24 24 24zm-8 171.8c-20-12.2-33.3-29-42.7-53.8 4.5-18.5 11.6-46.6 6.2-64.2-4.7-29.4-42.4-26.5-47.8-6.8-5 18.3-.4 44.1 8.1 77-11.6 27.6-28.7 64.6-40.8 85.8-.1 0-.1.1-.2.1-27.1 13.9-73.6 44.5-54.5 68 5.6 6.9 16 10 21.5 10 17.9 0 35.7-18 61.1-61.8 25.8-8.5 54.1-19.1 79-23.2 21.7 11.8 47.1 19.5 64 19.5 29.2 0 31.2-32 19.7-43.4-13.9-13.6-54.3-9.7-73.6-7.2zM377 105L279 7c-4.5-4.5-10.6-7-17-7h-6v128h128v-6.1c0-6.3-2.5-12.4-7-16.9zm-74.1 255.3c4.1-2.7-2.5-11.9-42.8-9 37.1 15.8 42.8 9 42.8 9z">
+                </path>
+              </svg><!-- <i class="fas fa-file-pdf"></i> Font Awesome fontawesome.com -->
+            </span>
+            <span>Paper</span>
+          </a>
+        </span>
+        <span class="link-block">
+          <a href=""
+            class="external-link button is-normal is-rounded is-dark">
+            <span class="icon">
+              <svg class="svg-inline--fa fa-github fa-w-16" aria-hidden="true" focusable="false" data-prefix="fab"
+                data-icon="github" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512" data-fa-i2svg="">
+                <path fill="currentColor"
+                  d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z">
+                </path>
+              </svg><!-- <i class="fab fa-github"></i> Font Awesome fontawesome.com -->
+            </span>
+            <span>Code</span>
+          </a>
+        </span>
+      </div>
+    </div>
+
+    </br>
     <div class="row">
       <div class="col-sm-10 col-sm-offset-1 text-center">
         <ul class="list-inline">
-          <li> Shuyun Wang<sup>1,5</sup></a> </li>
-          <li> Yanbin Liu Lin<sup>2</sup></a> </li>
-          <li> Ming Lu<sup>3</sup></a> </li>
-          <li> Zhuojie Wu<sup>1</sup></a> </li>
-          <li> Senmao Tian<sup>4</sup></a> </li>
-          <li> Yandong Guo<sup>5</sup></a> </li>
-          <li> Xin Yu<sup>1*</sup></a> </li>
+          <li> <a href="">Shuyun Wang</a><sup>1,5</sup></a> </li>
+          <li> <a href="">Yanbin Liu</a><sup>2</sup></a> </li>
+          <li> <a href="">Ming Lu</a><sup>3</sup></a> </li>
+          <li> <a href="">Zhuojie Wu</a><sup>1</sup></a> </li>
+          <li> <a href="">Senmao Tian</a><sup>4</sup></a> </li>
+          <li> <a href="">Yandong Guo</a><sup>5</sup></a> </li>
+          <li> <a href="">Xin Yu</a><sup>1*</sup></a> </li>
         </ul>
         <ul class="list-inline">
           <li> <sup>1</sup> University of Queensland</li>
@@ -105,11 +140,10 @@
           <li> <sup>3</sup>Intel</li>
           <li> <sup>4</sup>Beijing Jiaotong University</li>
           <li> <sup>5</sup>AI^2 Robotics</li>
-          <br />
-          <li> <sup>*</sup> Corresponding Author</li>
         </ul>
       </div>
     </div>
+
     <div class="row">
       <div class="col-md-12 col-md-offset-0">
           <center>
@@ -124,7 +158,7 @@
               poster="COVSR_files/loading.gif" src="COVSR_files/ours/crf_15/000.mp4" style="width: 0%">
             </video>
             <p>
-              The demonstration video involves <b>Our-Trans.</b> method and 4x <b>bicubic</b> interpolation, and is compressed for fast loading.<br />
+              The demonstration video involves Our <b>COVSR</b> method and 4x <b>bicubic</b> interpolation, and is compressed for fast loading.<br />
               You can select different <b>constant rate factors</b> for different <b>scenes</b> within two <b>testsets</b>.
             </p>
             <h4>
@@ -160,37 +194,34 @@
       </div>
     </div>
 
-
-
     <div class="row">
       <div class="col-md-10 col-md-offset-1">
         <h3>
           Abstract
         </h3>
         <div class="text-justify">
-          Videos transmitted over the Internet or stored on client devices are typically in compressed formats under the random access mode.
-          Existing compressed video super-resolution methods utilise metadata in a sequential manner consistent with presentation timestamps. 
-          However, metadata is closely correlated with decoding timestamps, and there exists a large discrepancy between decoding and presentation timestamps. 
-          Ignoring this discrepancy will hinder the effective use of metadata and lead to undesirable results. <br> <br>
+          Current compressed video super-resolution methods have achieved promising performance but they often assume that an input video is compressed under low-delay configurations.
+          However, under random access configurations, those methods might struggle to leverage the metadata effectively due to the large variations of metadata in different compression configurations.<br> <br>
           <center>
-            <img src="./COVSR_files/Picture1.svg" class="img-responsive" alt="overview" width="100%"
+            <img src="./COVSR_files/Picture1.svg" class="img-responsive" alt="t-pic" width="100%"
               style="margin:auto;">
           </center>
           <font size="2" color="gray">
-          Comparison of our method and the state-of-the-art compressed Video Super-Resolution (VSR) method (CAVSR). 
+          Comparison of our method and the state-of-the-art compressed video super-resolution method (CAVSR).
           (a) At time step i, metadata is generated by a current frame x<sub>i</sub> and a reference frame x<sub>i−α</sub>, where the value of α is decided by the codec process. 
-          (b) Since α is not always equal to 1, using mismatched metadata in CAVSR to align the previous feature h<sub>i−1</sub> will cause misalignment
-          (c) Some visualisations of misalignment in CAVSR. (d) Our alignment method accurately models the moving car and retains better contours thanks to the correct use of metadata.
+          (b) Since α is not always equal to 1, using mismatched metadata (motion vector m<sub>i-α->i</sub> in CAVSR to align the previous adjacent feature f<sub>i-1</sub> will cause misalignment. 
+          (c) Some visualizations of misalignment in CAVSR. 
+          (d) Our alignment method accurately models the moving car and retains better contours thanks to the effective use of metadata.
           </font>
-          <br><br>In this paper, we propose an efficient compression-omniscient video super-resolution framework that correctly and fully leverages metadata extracted from the random-access compressed video. 
-          Firstly, we introduce a compression-omniscient propagation scheme based on the decoding timestamps. 
-          It leads to three major advantages: 
-          (1) With the revisit mechanism and the design based on decoding timestamps, our propagation can refer to information from different spatiotemporal locations; 
-          (2) This propagation matches the correct metadata prior for each reference information; 
-          (3) We employ parallel computation during inference leads to more than 50% speedup.
-          Secondly, we propose a motion vector refinement module that refines motion vectors to the optical flow domain. 
-          This enables us to efficiently and accurately estimate the correspondence of information from different spatiotemporal locations. 
-          Experimental results demonstrate that our framework significantly improves efficiency while achieving state-of-the-art performance.
+          <br><br>In this work, we propose a general Compression-Omniscient Video Super-Resolution (COVSR) method that can address video super-resolution for both low-delay and random-access configurations. 
+          Specifically, we first introduce an efficient compression-aware propagation (ECAP) module that dynamically adjusts propagation routes in accordance with the compression configurations.
+          Since existing methods require reconstructing frames in a frame-by-frame manner, it is difficult to achieve efficient parallelization.
+          However, we found that by slightly sacrificing temporal dependencies, our ECAP can significantly improve inference speed.
+          Furthermore, considering that ECAP may bring challenges in cross-frame alignment, we designed a metadata-driven alignment (MDA) module to refine the motion vectors rather than calculating cross-frame offsets from scratch. 
+          MDA first transforms motion vectors into coarse optical flows and then iteratively refines them over several scales into dense feature-level optical flows.
+          In this way, MDA significantly improves the quality of motion vectors while achieving faster alignment speed by exploiting metadata.
+          Extensive experimental results demonstrate that our COVSR not only achieves efficient and superior super-resolution performance but also is generalizable to various compression configurations.
+          Our code will be available.
         </div>
       </div>
     </div>
@@ -206,11 +237,28 @@
         </center>
 
         <div class="text-justify">
-          The overall architecture of the proposed framework. Given a frame sequence, let \(x_i\) be the current frame with presentation order \(i\), \(i-{\alpha}\) and \(i+{\beta}\) are two reference time steps of frame \(x_i\), \(f_i^j\) represent the feature computed at the \(i\)-th time step in the \(j\)-th feature state (shallow, intermediate). We slice two neighbouring I- or P-frames and all of the B-frames in them as a group. The first group starts with I-frame \(x_0\) and the following group will start with the P-frame. First, we compute shallow feature \(f_i^1\) through input frame \(x_i\) into the feature extraction module. Then, to obtain the feature \(f_i^j\), we first compute optical flow from reference frame \(x_{i-{\alpha}}\) and \(x_{i+{\beta}}\) to the current frame \(x_i\) using our proposed motion vector refinement module, which will be discussed in the next section:
-          $$o_{i\rightarrow i-{\alpha}}, o_{i\rightarrow i+{\beta}} = \textit{MVRM}(x_i, x_{i-{\alpha}}, x_{i+{\beta}}, m_{i\rightarrow i-{\alpha}}, m_{i\rightarrow i+{\beta}}),$$
-          where \(o_{i\rightarrow i-{\alpha}}\), \(m_{i\rightarrow i+{\alpha}}\) denote the feature-level optical flow and the motion vector from \(x_i\) to the \(x_{i-\alpha}\). The feature-level optical flows are used to warp the corresponding features to obtain the alignment features, and then they will be concatenated and passed into the feature aggregation block within propagation:
-          $$f_i^j = \mathcal{A}\Big(\textit{c}\big(f_i^{j-1}, \mathcal{W}(f_{i-{\alpha}}^j, o_{i\rightarrow i-{\alpha}}), \mathcal{W}(f_{i+{\beta}}^j, o_{i\rightarrow i+{\beta}})\big)\Big),$$
-          where \(\mathcal{A}\) represents feature aggregation block, \(\textit{c}\) denotes concatenation along channel dimension, \(\mathcal{W}\) represents warping operation. Finally, we can compute super-resolution frames \(y_i\) after propagation by using the final feature \(f_i^3\) through an upsampling module. In the following procedure, we will only elaborate on the reference time step \(i-{\alpha}\), and the same goes for \(i+{\beta}\).
+          The architecture of our Compression-Omniscient Video Super-Resolution (COVSR) is shown in Fig. 2.
+          COVSR aims to restore the high-resolution (HR) frames from low-resolution (LR) frames with the assistance of metadata, such as frame types and block sizes.
+          Specifically, COVSR consists of four modules: feature extraction module, Efficient Compression-Aware Propagation (ECAP), Metadata-Driven Alignment (MDA) module, and upsampling module.
+          <br>Let <em>x<sub>i</sub></em> denotes the current frame at time step <em>i</em>, and <em>x<sub>i-&alpha;</sub></em>, <em>x<sub>i+&beta;</sub></em> represent its two reference frames.
+          In order to generate a high-resolution frame, <em>x<sub>i</sub></em> undergoes different states to extract rich features, <em>i.e.</em>, <em>f<sub>i</sub><sup>j</sup></em> represents the feature at the <em>j</em>-th (<em>j=1,2,3</em>) state. The high-resolution frame of <em>x<sub>i</sub></em> can be generated using the following steps:
+          <ol style="padding-left: 40px;">
+            <li>The shallow feature <em>f<sub>i</sub><sup>1</sup></em> of the frame <em>x<sub>i</sub></em> is obtained from the feature extraction module.</li>
+            <li>MDA first refines motion vectors between the reference frames and the current frame to obtain accurate feature-level optical flows <em>o<sub>i-&alpha; &rarr; i</sub></em> and <em>o<sub>i+&beta; &rarr; i</sub></em>. Then, aligned reference states <em>f<sub>i-&alpha; &rarr; i</sub><sup>j</sup></em>, <em>f<sub>i+&beta; &rarr; i</sub><sup>j</sup></em> are obtained by optical flow and warping operations.
+              <center>
+                <img src="./COVSR_files/Picture4.svg" class="img-responsive" width="80%"
+                  style="max-height: 350px;margin:auto;">
+              </center>
+            </li>
+            <li>The aligned reference states are fed into the feature fusion blocks along with the previous state <em>f<sub>i</sub><sup>j-1</sup></em> to generate the aggregation feature <em>f<sub>i</sub><sup>j</sup></em>. The <em>f<sub>i</sub><sup>j</sup></em> will then be propagated as a state in ECAP.
+              <center>
+                <img src="./COVSR_files/Picture3.svg" class="img-responsive" width="100%"
+                  style="max-height: 300px;margin:auto;">
+              </center>
+            </li>
+            <li>The final feature <em>f<sub>i</sub><sup>3</sup></em> is derived after propagation. We input it to the upsampling module to generate the high-resolution frame.</li>
+        </ol>        
+          Details of the efficient compression-aware propagation and the metadata-driven alignment module are described in Sec. 3 and Sec. 4, respectively.
         </div>
       </div>
     </div>
